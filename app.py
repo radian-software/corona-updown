@@ -76,6 +76,8 @@ def reboot(action):
             info["ec2"].stop()
         elif action == "reboot":
             info["ec2"].reboot()
+        else:
+            raise Exception("internal error")
     except Exception as e:
         return str(e), 500
     return "", 204
