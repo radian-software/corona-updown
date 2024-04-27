@@ -38,6 +38,7 @@ def get_ec2_info():
         "error": None,
         "ec2": instance,
         "state": state,
+        "ip": instance.public_ip_address,
         "actions": actions,
         "action_styles": {
             "start": "btn-success",

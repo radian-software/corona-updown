@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -41,6 +41,9 @@
       <p>Error: {{ info.error }}</p>
       {% else %}
       <p>Current state: <b>{{ info.state }}</b></p>
+      {% if info.ip %}
+      <p>IPv4 address: <b>{{ info.ip }}</b></p>
+      {% endif %}
       <div id="buttons">
         {% if not info.actions %}
         <p>
