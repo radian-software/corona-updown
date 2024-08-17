@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -48,7 +48,7 @@
       input.value = Cookies.get("auth-token") || "";
       input.focus();
       function submit() {
-        Cookies.set("auth-token", input.value, { expires: 1000000 * 365 });
+        Cookies.set("auth-token", input.value, { expires: 365 });
         location.reload();
       }
     </script>
